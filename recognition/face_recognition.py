@@ -2,6 +2,11 @@ import cv2
 import pickle
 import numpy as np
 import os
+
+
+
+
+
 video=cv2.VideoCapture(0)
 facedetect=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
