@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียนนิสิต</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ลงทะเบียนนิสิต</h1>
+        <form id="registration-form" action="#" method="post" enctype="multipart/form-data">
+            <label for="fullname">ชื่อ-นามสกุล:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            
+            <label for="studentid">รหัสนิสิต:</label>
+            <input type="text" id="studentid" name="studentid" required>
+
+            <label for="profile-picture">เลือกรูปภาพของคุณ:</label>
+            <input id="profile-picture" type="file" name="files[]" multiple>
+            <div id="file-list"></div>
+
+            <button type="submit">ยืนยัน</button>
+        </form>
+    </div>
+
+    <!-- Modal Box -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <p>ดำเนินการสำเร็จ</p>
+            <button id="modal-ok-btn">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

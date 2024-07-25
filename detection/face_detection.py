@@ -31,7 +31,7 @@ while True:
     faces=facedetect.detectMultiScale(gray, 1.3 ,5)
     for (x,y,w,h) in faces:
         crop_img=frame[y:y+h, x:x+w, :]
-        resized_img = cv2.resize(crop_img, (25, 50)).flatten().reshape(1, -1)
+        resized_img = cv2.resize(crop_img, (5, 10)).flatten().reshape(1, -1)
         output=knn.predict(resized_img)
         ts=time.time()
         date=datetime.fromtimestamp(ts).strftime("%d-%m-%Y")
